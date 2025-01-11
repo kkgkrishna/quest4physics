@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { HiBadgeCheck } from "react-icons/hi";
-import centerImage from "../../public/assets/QuestCenterImage/centerImage.jpg";
 
 function QuestCenter() {
   return (
@@ -9,9 +8,11 @@ function QuestCenter() {
         {/* Image Section */}
         <div className="w-full lg:w-1/2">
           <Image
-            src={centerImage}
+            src="/assets/QuestCenterImage/centerImage.jpg"
             alt="Quest4Physics Center"
-            className="rounded-lg transition-transform transform "
+            width={500} // Set your desired width
+            height={300} // Set your desired height
+            className="rounded-lg transition-transform transform"
           />
         </div>
 
