@@ -1,7 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { enqueueSnackbar, SnackbarProvider } from "notistack";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
 import CustomLoader from "../components/CustomLoader";
 import BrandLogo from "../components/BrandLogo";
 import CustomBtn from "../components/CustomBtn";
@@ -103,10 +101,9 @@ function ResetPasswordScreen() {
 
     // Check if password is empty
     if (!password || password.length === 0) {
-      enqueueSnackbar("New password is required", {
-        autoHideDuration: 3000,
-        variant: "error",
-        anchorOrigin: { horizontal: "center", vertical: "top" },
+      setMessageBox({
+        isError: true,
+        message: "New password is required",
       });
       return;
     }
